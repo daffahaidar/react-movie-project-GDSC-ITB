@@ -1,38 +1,52 @@
 .App {
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .Cards{
+  padding: 5%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-column-gap: 10px;
+  grid-row-gap:50px;
+  grid-template-columns: auto auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .Cards .Card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .Cards .Card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.App .Cards .Card .MoviePoster {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+
+.App .Cards .Card .Container {
+  padding: 0px 20px 20px 20px;
+}
+
+.App .Cards .Card .Button {
+  cursor: pointer;
+  background-color: dodgerblue;
   color: white;
+  text-align: center;
+  padding: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.App .Cards .Card .Button:hover {
+  background-color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.App .Cards .Card .Button p {
+  font-size: small;
 }
+
+
+
